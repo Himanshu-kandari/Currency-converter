@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Teko&display=swap');
+
+:root {
+  --color1: #c21333;
+  --color2: #1d202b;
+  --color3: #1f212c;
+  --color4: #d8d8c8;
+  --color5: #ed9c20; 
+  --color6: #a46b78; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--color3);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 25%;
+}
+
+.switch-cur {
+  width: 35%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Aqui empezamos */
+section.main {
+  width: 100%; height: 100vh;
+  background-color: var(--color2);
+  display: flex; 
+  flex-direction: column; justify-content: center; align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-family: 'Teko', sans-serif;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  color: var(--color3);
+  text-shadow: 0 0 5px var(--color6);
+  animation: glow ease-in-out 1s alternate infinite;
+}
+
+@keyframes glow {
+  from {
+		text-shadow: 0 0 5px white,  0 0 10px white,  0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px;
+	}
+	to {
+		text-shadow: 0 0 10px white,  0 0 15px white,  0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px;
+	}
+}
+
+.box {
+  background-color: var(--color1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px var(--color1);
+  border-radius: 20px;
+  width: 35rem;
+  padding: 4rem;
+}
+
+.base-convert {
+  background-color: var(--color3);
+  color: var(--color4);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+}
+
+.base-convert-1 {
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  width: 20%; height: 100%;
+  background-color: var(--color1);
+  border-radius: 60%;
+  box-shadow: 0 0 10px var(--color1);
+}
+
+.base-convert-2 {
+  position: absolute;
+  bottom: 0;
+  right: -10%;
+  width: 20%; height: 100%;
+  background-color: var(--color1);
+  border-radius: 60%;
+  box-shadow: 0 0 10px var(--color1);
+}
+
+.base-convert p {
+  font-weight: 700;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.base {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color5)
+}
+
+.text {
+  font-family: 'Archivo Black', sans-serif;
+  display: flex;
+  text-shadow: 0 0 10px var(--color5);
+  padding-left: 3rem;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color6);
+  margin: 1rem 0;
+  font-weight: 600;
+  color: var(--color4);
+}
+
+.text:nth-child(2) {
+  padding-right: 4rem;;
+}
+
+.main-convert {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cur-box {
+  width: 30%;
+}
+
+.switch-cur {
+  width: 30%;
+  text-align: center;
+  margin-left: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.currency  {
+  box-shadow: 1px 1px 24px var(--color5);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  width: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.currency img {
+  width: 40px;
+
+  margin-right: 5px;
+  border-radius: 100%;
+  box-shadow: inset 0 100px 100px rgba(255, 255, 255, .486),
+              inset 0 -150px 100px rgba(0, 0, 0, 1),
+              inset 0 -0px 100px rgba(0, 0, 0, 1);
+
+}
+
+.currency select {
+   border: none;
+   outline: none;
+   cursor: pointer;
+   background-color: rgba(29, 32, 43, .8);
+   color: var(--color4);
+   font-weight: 700;
+   border-radius: 5px;
+   padding: 3px;
+   font-weight: 700;
+}
+
+.cur-box input {
+  width: 9.2rem;
+  height: 2rem;
+  margin: 0 5px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: var(--color3);
+  color: var(--color4);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+}
+
+.rotate {
+  transform: rotate(360deg);
+}
+
+@media(max-width: 650px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media(max-width: 550px) {
+  p {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+  
+  img {
+    width: 65%;
+  }
+  
+  .container {
+    width: 400px;
+  }
+  
+  .box {
+    width: 25rem;
+    padding: 3rem;
+  }
+
+  .base {
+    font-size: .8rem;
+  }
+  
+  
+  .cur-box {
+    width: 45%;
+  }
+
+  .switch-cur {
+    width: 50%;
+    margin-left: 0rem;
+  }
+  
+  .currency  {
+    margin: 0 1rem;
+    width: 7rem;
+  }
+
+  .currency img {
+    width: 30px;
+    margin-right: 3px;
+  }
+
+  .cur-box input {
+    width: 6rem;
+    height: 1.6rem;
+    margin: .3rem 1.7rem;
+    font-size: 1rem;
+  }
+}
